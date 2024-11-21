@@ -1,0 +1,40 @@
+:root {
+  --primary-color: #2b6925;
+  --secondary-color: #ee2561;
+  --dark-blue: #002A4C;
+  --light-blue: #00ff22;
+  --dark-orange: #FF7F00;
+  --light-orange: #F4B77B;
+  --kadwa: Arial, sans-serif;
+  --kadwa-bold: Arial, sans-serif;
+  --login-background-color: #1f304e;
+  --login-container-color: #1f304e;
+  --table-bottom-line-color: #E5E5E5;
+}
+
+
+body {
+  background-color: var(--login-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.text-danger {
+  color: red;
+}

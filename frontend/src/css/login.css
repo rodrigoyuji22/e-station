@@ -1,0 +1,420 @@
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 90dvh;
+    width: 95dvw;
+    background-color: var(--login-container-color);
+    border-radius: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login-forms {
+    width: 30%;
+    min-height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 14px 14px 51.1px 12px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    min-height: 50%;
+    max-height: 65%;
+    width: 75%;
+    align-self: center;
+}
+
+.login-container h1,
+h2 {
+    font-weight: 700;
+    font-family: var(--kadwa-bold);
+}
+
+.login-container h1 {
+    text-align: center;
+}
+
+.login-container .inputgroup {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid #000000;
+    padding: 5px 0;
+}
+
+.login-container .inputgroup label {
+    display: inline-block;
+
+}
+
+.login-container .inputgroup input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.login-container .inputgroup .bi {
+    border: none;
+    background-color: transparent;
+    color: var(--login-background-color);
+    transition: all ease 0.3s;
+    padding: 5px;
+}
+
+.login-container .inputgroup .bi:hover {
+    color: var(--secondary-color);
+}
+
+.login-container form a {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-family: var(--kadwa-bold);
+    font-size: 16px;
+    text-decoration: underline;
+    transition: all ease 0.3s;
+}
+
+.login-container form a:hover {
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #00ff2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    margin-top: 10%;
+    font-weight: 700;
+    font-size: 20px;
+    box-shadow: 0px 0px 10.1px 5px rgba(13, 158, 8, 0.45);
+    font-family: var(--kadwa);
+    scale: 0.9;
+}
+
+.login-btn:hover {
+    background-color: #00b35a;
+    scale: 1.01;
+}
+
+.ilustration {
+    scale: 1.25;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 34%;
+    background-color: var(--login-background-color);
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+
+.checkbox.no-display {
+    display: none;
+}
+
+
+.modal-base {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 30%;
+    border-color: transparent;
+    background-color: white;
+    justify-self: center;
+    align-self: center;
+    z-index: 10;
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-base.active {
+    display: block;
+    /* Exibe o modal */
+}
+
+.modal-base header {
+    background-color: var(--secondary-color);
+    height: 15%;
+    width: 100%;
+    border-color: transparent;
+
+}
+
+.modal-base header h1 {
+    color: white;
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    font-size: 26px;
+    justify-self: center;
+    align-self: center;
+}
+
+.modal-base header button {
+    background-color: transparent;
+    border-color: transparent;
+    justify-self: flex-end;
+    align-self: center;
+    transition: all ease 0.3s;
+}
+
+.modal-base header button:hover {
+    scale: 1.1;
+}
+
+.modal-base .modal-content {
+    height: 85%;
+    border-bottom-left-radius: 19px;
+    border-bottom-right-radius: 19px;
+    border-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-base .modal-content form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.modal-base .modal-content form .modal-content-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 20%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-base .modal-content form .modal-content-row label {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    text-align: left;
+}
+
+.modal-base .modal-content form .modal-content-row label span {
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.modal-base .modal-content form .modal-content-row label input {
+    background-color: var(--light-background-color);
+    border-radius: 4px;
+    border: 1px solid #b0b0b0;
+    height: 100%;
+}
+
+.modal-base .modal-content form .modal-content-row label select {
+    background-color: var(--light-background-color);
+    border-radius: 4px;
+    border: 1px solid #b0b0b0;
+    appearance: none;
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='blue' class='bi bi-caret-down-fill' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14a.5.5 0 0 0 .506 0l5.5-3.5a.5.5 0 0 0-.506-.86H2.753a.5.5 0 0 0-.506.86l5.5 3.5z'/%3E%3C/svg%3E");
+    /* Blue arrow */
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 12px;
+}
+
+.modal-base .modal-content form .modal-content-row p {
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+    width: 80%;
+}
+
+.modal-base .modal-content form .button-row {
+    height: 15%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-base .modal-content form .button-row button.info {
+    border-color: transparent;
+    background-color: transparent;
+    position: absolute;
+    right: 15px;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.modal-base .modal-content form .button-row button.info:disabled {
+    cursor: default;
+    filter: grayscale(100%);
+}
+
+.modal-base .modal-content form button.confirm {
+    background-color: #0ed546;
+    border-radius: 6px;
+    height: 100%;
+    width: 50%;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    border-color: transparent;
+    transition: all ease 0.3s;
+}
+
+.modal-base .modal-content form button.confirm:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    scale: 1.1;
+}
+
+.modal-base .modal-content form a.cancel-button {
+    cursor: pointer;
+    background-color: #fd5765;
+    border-radius: 6px;
+    height: 100%;
+    width: 50%;
+    color: white;
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    font-size: 20px;
+    border-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    padding: 1%;
+    transition: all ease 0.3s;
+}
+
+.modal-base .modal-content form a.cancel-button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    scale: 1.1;
+}
+
+.modal-base .modal-content form a.cancel-button.disabled {
+    filter: grayscale(100%);
+    cursor: default;
+}
+
+.modal-base .modal-content form a.cancel-button.disabled:hover {
+    box-shadow: none;
+    scale: 1;
+}
+
+.modal-base .modal-content form a.info-button {
+    cursor: pointer;
+    background-color: #0094ff;
+    border-radius: 6px;
+    height: 100%;
+    width: 60%;
+    color: white;
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    font-size: 16px;
+    border-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    padding: 3%;
+    transition: all ease 0.3s;
+}
+
+.modal-base .modal-content form a.info-button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    scale: 1.1;
+}
+
+.modal-base .modal-content form a.info-button.disabled {
+    filter: grayscale(100%);
+    cursor: default;
+}
+
+.modal-base .modal-content form a.info-button.disabled:hover {
+    box-shadow: none;
+    scale: 1;
+}
+
+
+@media(width < 1120px) {
+    .ilustration {
+        display: none;
+    }
+
+    .login-forms {
+        width: 90%;
+    }
+
+    .login-container {
+        justify-content: start;
+        max-height: 70%;
+        min-height: 50%;
+        width: 95%;
+        font-size: 30px;
+    }
+
+    .brand-logo {
+        margin-bottom: 40%;
+    }
+
+    .login-btn {
+        height: 30%;
+        font-size: 50px;
+        margin-top: 20%;
+    }
+
+    .login-container h2 {
+        font-size: 50px;
+        margin-bottom: 5%;
+    }
+
+    .login-container .inputgroup {
+        min-height: 25%;
+        margin-top: 5%;
+    }
+
+    .login-container .inputgroup label {
+        scale: 1.5;
+        width: 50px;
+        margin-left: 25px;
+    }
+
+    .login-container .inputgroup input {
+        font-size: 30px;
+    }
+
+    .login-container .inputgroup .bi {
+        scale: 1.5;
+        margin-right: 10px;
+    }
+}

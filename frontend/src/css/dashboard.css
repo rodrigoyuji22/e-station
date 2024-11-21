@@ -1,0 +1,366 @@
+button {
+    cursor: pointer;
+}
+
+.table-container {
+    background-color: white;
+    border-radius: 10px;
+    width: 96dvw;
+    max-height: 90dvh;
+    min-height: 70dvh;
+    margin-top: 10px;
+    margin-left: 0%;
+    justify-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.table-container::-webkit-scrollbar {
+    width: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #a19d9d;
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.table-container:hover {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.table-container:hover::-webkit-scrollbar {
+    opacity: 1;
+}
+
+.table-container button {
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: center;
+    color: white;
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    transition: all ease 0.3s;
+    scale: 0.7;
+}
+
+.table-container button:hover {
+    background-color: rgb(20, 156, 127);
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    scale: 0.8;
+}
+
+.table-container table {
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    border-collapse: collapse;
+}
+
+.table-container table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+
+.table-container table thead tr {
+    border-bottom: 3px solid var(--table-bottom-line-color);
+}
+
+.table-container table thead tr th {
+    padding: 15px;
+}
+
+.table-container table tbody {
+    font-family: var(--kadwa);
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+}
+
+.table-container table tbody tr {
+    border-bottom: 3px solid var(--table-bottom-line-color);
+}
+
+.table-container table tbody tr td {
+    padding-top: 5px;
+    text-transform: capitalize;
+}
+
+.table-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-actions button {
+    border-color: transparent;
+    background-color: white;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.table-actions button:hover {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.table-actions button:disabled {
+    filter: grayscale(100%);
+}
+
+.table-actions button img {
+    max-width: 35px;
+}
+
+.modal-base {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 30%;
+    border-color: transparent;
+    background-color: white;
+    justify-self: center;
+    align-self: center;
+    z-index: 10;
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-base.active {
+    display: block;
+    /* Exibe o modal */
+}
+
+.modal-base header {
+    background-color: var(--secondary-color);
+    height: 15%;
+    width: 100%;
+    border-color: transparent;
+}
+
+.modal-base header h1 {
+    color: white;
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    font-size: 26px;
+    justify-self: center;
+    align-self: center;
+}
+
+.modal-base header button {
+    background-color: transparent;
+    border-color: transparent;
+    justify-self: flex-end;
+    align-self: center;
+    transition: all ease 0.3s;
+}
+
+.modal-base header button:hover {
+    scale: 1.1;
+}
+
+.modal-base .modal-content {
+    height: 85%;
+    border-bottom-left-radius: 19px;
+    border-bottom-right-radius: 19px;
+    border-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-base .modal-content form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.modal-base .modal-content form .modal-content-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 20%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-base .modal-content form .modal-content-row label {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    text-align: left;
+}
+
+.modal-base .modal-content form .modal-content-row label span {
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.modal-base .modal-content form .modal-content-row label input {
+    background-color: var(--light-background-color);
+    border-radius: 4px;
+    border: 1px solid #b0b0b0;
+    height: 100%;
+}
+
+.modal-base .modal-content form .modal-content-row label select {
+    background-color: var(--light-background-color);
+    border-radius: 4px;
+    border: 1px solid #b0b0b0;
+    appearance: none;
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='blue' class='bi bi-caret-down-fill' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14a.5.5 0 0 0 .506 0l5.5-3.5a.5.5 0 0 0-.506-.86H2.753a.5.5 0 0 0-.506.86l5.5 3.5z'/%3E%3C/svg%3E");
+    /* Blue arrow */
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 12px;
+}
+
+.modal-base .modal-content form .modal-content-row p {
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+    width: 80%;
+}
+
+.modal-base .modal-content form .button-row {
+    height: 15%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-base .modal-content form .button-row button.info {
+    border-color: transparent;
+    background-color: transparent;
+    position: absolute;
+    right: 15px;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.modal-base .modal-content form .button-row button.info:disabled {
+    cursor: default;
+    filter: grayscale(100%);
+}
+
+.modal-base .modal-content form button.confirm {
+    background-color: #0ed546;
+    border-radius: 6px;
+    height: 100%;
+    width: 50%;
+    color: white;
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    font-size: 20px;
+    border-color: transparent;
+    transition: all ease 0.3s;
+}
+
+.modal-base .modal-content form button.confirm:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    scale: 1.1;
+}
+
+.modal-base .modal-content form a.cancel-button {
+    cursor: pointer;
+    background-color: #fd5765;
+    border-radius: 6px;
+    height: 100%;
+    width: 50%;
+    color: white;
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    font-size: 20px;
+    border-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    padding: 1%;
+    transition: all ease 0.3s;
+}
+
+.modal-base .modal-content form a.cancel-button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    scale: 1.1;
+}
+
+.modal-base .modal-content form a.cancel-button.disabled {
+    filter: grayscale(100%);
+    cursor: default;
+}
+
+.modal-base .modal-content form a.cancel-button.disabled:hover {
+    box-shadow: none;
+    scale: 1;
+}
+
+.modal-base .modal-content form a.info-button {
+    cursor: pointer;
+    background-color: #0094ff;
+    border-radius: 6px;
+    height: 100%;
+    width: 60%;
+    color: white;
+    font-family: var(--kadwa-bold);
+    font-weight: 700;
+    font-size: 16px;
+    border-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    padding: 3%;
+    transition: all ease 0.3s;
+}
+
+.modal-base .modal-content form a.info-button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    scale: 1.1;
+}
+
+.modal-base .modal-content form a.info-button.disabled {
+    filter: grayscale(100%);
+    cursor: default;
+}
+
+.modal-base .modal-content form a.info-button.disabled:hover {
+    box-shadow: none;
+    scale: 1;
+}
