@@ -33,7 +33,7 @@ SQL Database (MySQL, PostgreSQL, etc.)
 git clone https://github.com/rodrigoyuji22/E_Station
 cd E_Station
 
-#Instale as dependências:
+# Instale as dependências:
 npm install
 
 # Configure o banco de dados SQL com os parâmetros necessários no arquivo de configuração.
