@@ -1,5 +1,5 @@
 # **Global Solutions - Mobile Dev**
-# INTEGRANTES: 
+INTEGRANTES: 
 Rodrigo Sakaguchi RM88010
 Marcelo Kutudjian Filho RM93124
 
@@ -32,7 +32,7 @@ SQL Database (MySQL, PostgreSQL, etc.)
 # Clone o repositório:
 git clone https://github.com/rodrigoyuji22/E_Station
 cd E_Station
-# Instale as dependências:
+#Instale as dependências:
 npm install
 # Configure o banco de dados SQL com os parâmetros necessários no arquivo de configuração.
 # Inicie o servidor:
